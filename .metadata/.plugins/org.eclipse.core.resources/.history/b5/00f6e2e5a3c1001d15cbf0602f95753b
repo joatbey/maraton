@@ -1,0 +1,42 @@
+package soru4;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		
+		Yolcu yolcu = new BusinessYolcu(7775, "Mert", "Kaya", false);	
+		Yolcu yolcu2 = new EkonomiYolcu(889, "Ahmet", "Demir");	
+		Yolcu yolcu3 = new BusinessYolcu(555, "Aslı", "Bahar", true);	
+		Yolcu yolcu4 = new BusinessYolcu(555, "Zeynep", "Dal", true);	
+
+		System.out.println("***Business Yolcu VIP***");
+		yolcu3.biletAl(EFirmaAdi.ADJ);
+		yolcu3.biletAl(EFirmaAdi.THY);
+		System.out.println("**************");
+		yolcu3.ucagaBin();
+		yolcu3.ucagaBin();
+		yolcu3.checkInYap();
+		yolcu3.checkInYap();
+		yolcu3.ucagaBin();
+		yolcu3.yolcuBilgileriniGetir();
+		
+		System.out.println("***Ekonomi Yolcu***");
+		yolcu2.biletAl(EFirmaAdi.ADJ);
+		yolcu2.biletAl(EFirmaAdi.THY);
+		yolcu2.biletAl(EFirmaAdi.THY);
+		yolcu2.biletAl(EFirmaAdi.THY);
+		System.out.println("*************");
+		yolcu2.ucagaBin();
+		yolcu2.ucagaBin();
+		yolcu2.checkInYap();
+		yolcu2.checkInYap();
+		yolcu2.ucagaBin();
+		yolcu2.yolcuBilgileriniGetir();
+		System.out.println("**************");-
+		yolcu4.biletAl(EFirmaAdi.AIRFRANCE);
+		yolcu4.yolcuBilgileriniGetir();
+	
+		
+	}
+}
